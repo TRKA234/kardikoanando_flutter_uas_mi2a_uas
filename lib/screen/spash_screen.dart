@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kardikoanando_flutter_uas_mi2a_uas/screen/page_list_klinik.dart';
 
 class SpashScreen extends StatefulWidget {
   const SpashScreen({super.key});
@@ -13,8 +14,11 @@ class _SpashScreenState extends State<SpashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, '/page_list_klinik');
+    Timer(Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => PageListKlinik()),
+      );
     });
   }
 
